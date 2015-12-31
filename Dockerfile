@@ -46,6 +46,7 @@ RUN gem install bundler --version "$BUNDLER_VERSION" \
 # don't create ".bundle" in all our apps
 ENV BUNDLE_APP_CONFIG $GEM_HOME
 
+RUN apt-get update -y
 RUN apt-get install -y npm
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN apt-get install -y default-jre
